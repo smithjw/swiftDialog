@@ -10,6 +10,19 @@
 		41110A2825F9E79E008171D2 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41110A2725F9E79E008171D2 /* License.swift */; };
 		4114E1E927153FEE00388274 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4114E1E827153FEE00388274 /* AVKit.framework */; };
 		4114E1EB27154B2200388274 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4114E1EA27154B2200388274 /* VideoView.swift */; };
+		4123F41A2726406400B121D8 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4123F4192726406400B121D8 /* MarkdownUI */; };
+		4123F41B2726407F00B121D8 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4114E1EA27154B2200388274 /* VideoView.swift */; };
+		4123F41C2726407F00B121D8 /* watermarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A44EAF26F2F25200FEE1AC /* watermarkView.swift */; };
+		4123F41D2726407F00B121D8 /* TextEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD75B526AA81760023EBD8 /* TextEntryView.swift */; };
+		4123F41E2726407F00B121D8 /* progressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FD45FD26C40366006976FC /* progressBarView.swift */; };
+		4123F41F2726407F00B121D8 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FD45FF26C8DC5D006976FC /* ImageView.swift */; };
+		4123F4202726408500B121D8 /* jamfHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6FE8426DB11BA0083BE61 /* jamfHelper.swift */; };
+		4123F4212726408500B121D8 /* ProcessCLOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415934D726DB1B44009C9C3A /* ProcessCLOptions.swift */; };
+		4123F4222726408500B121D8 /* WindowPositioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415934D926DB7604009C9C3A /* WindowPositioning.swift */; };
+		4123F4232726408500B121D8 /* helpText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A44EB126F4C43A00FEE1AC /* helpText.swift */; };
+		4123F424272640D300B121D8 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4114E1E827153FEE00388274 /* AVKit.framework */; };
+		4123F4282726C52C00B121D8 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123F4272726C52C00B121D8 /* Notifications.swift */; };
+		4123F4292726C67F00B121D8 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123F4272726C52C00B121D8 /* Notifications.swift */; };
 		4153783226001A0900AA0E76 /* StringProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4153783126001A0900AA0E76 /* StringProcessing.swift */; };
 		4153784E2604B71800AA0E76 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4153784D2604B71800AA0E76 /* TitleView.swift */; };
 		415378532604B79F00AA0E76 /* IconOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415378522604B79E00AA0E76 /* IconOverlayView.swift */; };
@@ -89,6 +102,7 @@
 		41110A2725F9E79E008171D2 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		4114E1E827153FEE00388274 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		4114E1EA27154B2200388274 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		4123F4272726C52C00B121D8 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		4153783126001A0900AA0E76 /* StringProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProcessing.swift; sourceTree = "<group>"; };
 		4153784D2604B71800AA0E76 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		415378522604B79E00AA0E76 /* IconOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconOverlayView.swift; sourceTree = "<group>"; };
@@ -131,6 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4123F424272640D300B121D8 /* AVKit.framework in Frameworks */,
+				4123F41A2726406400B121D8 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +259,7 @@
 				415934D726DB1B44009C9C3A /* ProcessCLOptions.swift */,
 				415934D926DB7604009C9C3A /* WindowPositioning.swift */,
 				41A44EB126F4C43A00FEE1AC /* helpText.swift */,
+				4123F4272726C52C00B121D8 /* Notifications.swift */,
 			);
 			path = extras;
 			sourceTree = "<group>";
@@ -293,6 +310,9 @@
 			dependencies = (
 			);
 			name = Dialog;
+			packageProductDependencies = (
+				4123F4192726406400B121D8 /* MarkdownUI */,
+			);
 			productName = dialog;
 			productReference = 4154C2DA25F76BDB00A3D373 /* Dialog.app */;
 			productType = "com.apple.product-type.application";
@@ -453,6 +473,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4123F4292726C67F00B121D8 /* Notifications.swift in Sources */,
+				4123F4202726408500B121D8 /* jamfHelper.swift in Sources */,
+				4123F4212726408500B121D8 /* ProcessCLOptions.swift in Sources */,
+				4123F4222726408500B121D8 /* WindowPositioning.swift in Sources */,
+				4123F4232726408500B121D8 /* helpText.swift in Sources */,
+				4123F41B2726407F00B121D8 /* VideoView.swift in Sources */,
+				4123F41C2726407F00B121D8 /* watermarkView.swift in Sources */,
+				4123F41D2726407F00B121D8 /* TextEntryView.swift in Sources */,
+				4123F41E2726407F00B121D8 /* progressBarView.swift in Sources */,
+				4123F41F2726407F00B121D8 /* ImageView.swift in Sources */,
 				4153784E2604B71800AA0E76 /* TitleView.swift in Sources */,
 				4153785E2604B81300AA0E76 /* IconView.swift in Sources */,
 				417BF0BB260F1726009AD252 /* BannerImageView.swift in Sources */,
@@ -510,6 +540,7 @@
 				41FB64912680855300A54C3E /* Options.swift in Sources */,
 				41A44EB026F2F25200FEE1AC /* watermarkView.swift in Sources */,
 				41FB64922680855300A54C3E /* Processing.swift in Sources */,
+				4123F4282726C52C00B121D8 /* Notifications.swift in Sources */,
 				41D6FE8526DB11BA0083BE61 /* jamfHelper.swift in Sources */,
 				41FB64932680855300A54C3E /* License.swift in Sources */,
 				41FB64942680855300A54C3E /* StringProcessing.swift in Sources */,
@@ -881,6 +912,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4123F4192726406400B121D8 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41E4BC9526AEDB130042A0A3 /* XCRemoteSwiftPackageReference "MarkdownUI" */;
+			productName = MarkdownUI;
+		};
 		41E4BC9626AEDB130042A0A3 /* MarkdownUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 41E4BC9526AEDB130042A0A3 /* XCRemoteSwiftPackageReference "MarkdownUI" */;

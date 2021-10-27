@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import UserNotifications
 import SystemConfiguration
 
 
@@ -19,6 +19,7 @@ extension StringProtocol {
 @available(OSX 11.0, *)
 @main
 struct dialogApp: App {
+    
         
     init () {
         
@@ -74,20 +75,34 @@ struct dialogApp: App {
             //print("APPVARS")
             //print(appvars)
         }
+        //NSLog("Dialog: Notification Start")
+        if cloptions.sendAsNotification.present {
+            //if let response = (aNotification as NSNotification).userInfo?[NSApplication.launchUserNotificationUserInfoKey] as? UNNotificationResponse {
+            //    handleUNNotification(forResponse: response)
+            //}
+            sendNotification()
+            //quitDialog(exitCode: 11)
+        }
         
     }
     var body: some Scene {
 
         WindowGroup {
-            ContentView()
-                .frame(width: appvars.windowWidth, height: appvars.windowHeight) // + appvars.bannerHeight)
-                //.frame(idealWidth: appvars.windowWidth, idealHeight: appvars.windowHeight)
+            if !cloptions.sendAsNotification.present {
+                ContentView()
+                    .frame(width: appvars.windowWidth, height: appvars.windowHeight) // + appvars.bannerHeight)
+                    //.frame(idealWidth: appvars.windowWidth, idealHeight: appvars.windowHeight)
+            }
         }
         // Hide Title Bar
         .windowStyle(HiddenTitleBarWindowStyle())
     }
-
-    
+    /*
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "NewNotification") , object: nil, userInfo: response.notification.request.content.userInfo)
+        processNotification(forResponse: response)
+    }
+     */
 }
 
 

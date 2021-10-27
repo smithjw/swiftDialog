@@ -171,6 +171,7 @@ struct CLOptions {
     
     var jsonOutPut               = (long: String("json"),              short: String("j"),   value : String(""), present : Bool(false)) // -j
     var ignoreDND                = (long: String("ignorednd"),         short: String("d"),   value : String(""), present : Bool(false)) // -j
+    var sendAsNotification       = (long: String("notification"),      short: String(""),    value : String(""), present : Bool(false))
     // civhmtsb
     
     var jamfHelperMode           = (long: String("jh"),                short: String("jh"),  value : String(""), present : Bool(false))

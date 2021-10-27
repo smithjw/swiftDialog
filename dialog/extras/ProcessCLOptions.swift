@@ -365,5 +365,6 @@ func processCLOptionValues() {
     cloptions.quitOnInfo.present            = CLOptionPresent(OptionName: cloptions.quitOnInfo)
     cloptions.videoAutoPlay.present         = CLOptionPresent(OptionName: cloptions.videoAutoPlay)
     cloptions.listFonts.present             = CLOptionPresent(OptionName: cloptions.listFonts)
+    cloptions.sendAsNotification.present    = CLOptionPresent(OptionName: cloptions.sendAsNotification)
 
 }
