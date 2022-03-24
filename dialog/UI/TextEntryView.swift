@@ -12,6 +12,7 @@ struct TextEntryView: View {
     @ObservedObject var observedDialogContent : DialogUpdatableContent
     
     @State var textFieldValue = Array(repeating: "", count: textFields.count)
+    @State var datePickerValue = Array(repeating: Date(), count: textFields.count)
     //var textPromptValue = Array(repeating: "", count: textFields.count)
     
     @State private var animationAmount = 1.0
@@ -19,13 +20,15 @@ struct TextEntryView: View {
     var textFieldPresent: Bool = false
     var fieldwidth: CGFloat = 0
     var requiredFieldsPresent : Bool = false
+    var dateComponentSelected : DatePickerComponents = .date
     
     init(observedDialogContent : DialogUpdatableContent) {
         self.observedDialogContent = observedDialogContent
         if cloptions.textField.present {
             textFieldPresent = true
             for i in 0..<textFields.count {
-                textFieldValue.append(" ")
+                datePickerValue.append(Date())
+                //textFieldValue.append(" ")
                 if textFields[i].required {
                     requiredFieldsPresent = true
                 }
@@ -66,6 +69,14 @@ struct TextEntryView: View {
                                     TextField("", text: $textFieldValue[index], prompt:Text(textFields[index].prompt))
                                 } else {
                                     TextField("", text: $textFieldValue[index])
+                                }
+                                if textFields[index].date || textFields[index].time {
+                                    DatePicker("", selection: $datePickerValue[index], displayedComponents: dateComponentSelected)
+                                    .frame(width: 100)
+                                    .onChange(of: datePickerValue[index], perform: { value in
+                                        //textFields[index].value = value.formatted(date: .numeric, time: .numeric)
+                                        //print(datePickerValue[index])
+                                    })
                                 }
                             }
                         }

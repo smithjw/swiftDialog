@@ -23,6 +23,8 @@ struct TextFieldState {
     var required        : Bool      = false
     var secure          : Bool      = false
     var prompt          : String    = ""
+    var date            : Bool      = false
+    var time            : Bool      = false
     var value           : String    = ""
 }
 
